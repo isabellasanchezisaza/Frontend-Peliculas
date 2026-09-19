@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/directores';
+const API_URL = 'https://backend-peliculas-aqz3.onrender.com/directores';
 
 export const obtenerDirectores = () => axios.get(API_URL);
 export const crearDirector = (director) => axios.post(API_URL, director);

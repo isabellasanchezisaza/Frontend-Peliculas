@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/productoras';
+const API_URL = 'https://backend-peliculas-aqz3.onrender.com/productoras';
 
 export const obtenerProductoras = () => axios.get(API_URL);
 export const crearProductora = (productora) => axios.post(API_URL, productora);

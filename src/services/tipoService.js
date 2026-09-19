@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_URL = 'http://localhost:3000/tipos';
+const API_URL = 'https://backend-peliculas-aqz3.onrender.com/tipos';
 
 export const obtenerTipos = () => axios.get(API_URL);
 export const crearTipo = (tipo) => axios.post(API_URL, tipo);
