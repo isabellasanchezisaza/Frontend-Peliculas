@@ -30,7 +30,6 @@ function Director() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
     const director = { nombres, estado };
 
     try {
@@ -92,8 +91,10 @@ function Director() {
               onChange={(e) => setNombres(e.target.value)}
               required
             />
+
           </div>
           <div className="col-md-3">
+
             <select
               className="form-select"
               value={estado}
@@ -106,25 +107,28 @@ function Director() {
           <div className="col-md-3">
             <button type="submit" className="btn btn-primary w-100">
               {editandoId ? 'Actualizar' : 'Crear'}
+
             </button>
           </div>
         </div>
       </form>
 
-      <table className="table table-striped">
+    
+      <table className="table table-dark cinema-table align-middle mb-0">
         <thead>
           <tr>
-            <th>Nombres</th>
-            <th>Estado</th>
-            <th>Acciones</th>
+            <th className="text-white">Nombres</th>
+            <th className="text-white">Estado</th>
+            <th className="text-white">Acciones</th>
           </tr>
         </thead>
         <tbody>
           {directores.map((d) => (
             <tr key={d._id}>
-              <td>{d.nombres}</td>
-              <td>{d.estado}</td>
+              <td className="text-white">{d.nombres}</td>
+              <td className="text-white">{d.estado}</td>
               <td>
+
                 <button className="btn btn-sm btn-warning me-2" onClick={() => handleEditar(d)}>
                   Editar
                 </button>
@@ -140,4 +144,5 @@ function Director() {
   );
 }
 
-export default Director;
+export default Director; 
+

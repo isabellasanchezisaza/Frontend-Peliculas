@@ -124,22 +124,24 @@ function Genero() {
         </div>
       </form>
 
-      <table className="table table-striped">
+      
+      <table className="table table-dark table-striped">
         <thead>
           <tr>
-            <th>Nombre</th>
-            <th>Descripción</th>
-            <th>Estado</th>
-            <th>Acciones</th>
+            <th className="text-white">Nombre</th>
+            <th className="text-white">Descripción</th>
+            <th className="text-white">Estado</th>
+            <th className="text-white">Acciones</th>
           </tr>
         </thead>
         <tbody>
           {generos.map((g) => (
             <tr key={g._id}>
-              <td>{g.nombre}</td>
-              <td>{g.descripcion}</td>
-              <td>{g.estado}</td>
+              <td className="text-white">{g.nombre}</td>
+              <td className="text-white">{g.descripcion}</td>
+              <td className="text-white">{g.estado}</td>
               <td>
+                
                 <button className="btn btn-sm btn-warning me-2" onClick={() => handleEditar(g)}>
                   Editar
                 </button>
